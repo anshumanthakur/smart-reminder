@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.anshuman.final1">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".List">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".AlarmReciever" />
+
+        <service
+            android:name=".RingtoneService"
+            android:enabled="true" />
+        <activity
+            android:name=".Main1"
+            android:label="@string/title_activity_main1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".recorder"
+            android:label="@string/title_activity_recorder"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".intent1"
+            android:label="@string/title_activity_intent1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".setRingtone"
+            android:label="@string/title_activity_set_ringtone"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
